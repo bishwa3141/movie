@@ -17,7 +17,7 @@ from .models import (
     )
 
 
-@view_config(route_name='home', renderer='templates/home.pt')
+@view_config(route_name='home', renderer='templates/home.jinja2')
 def home(request):
     search_url = ''
     if 'form.submitted' in request.params:
@@ -29,7 +29,7 @@ def home(request):
     return dict(search_url= search_url)
 
 
-@view_config(route_name='search', renderer='templates/search.pt')
+@view_config(route_name='search', renderer='templates/search.jinja2')
 def search(request):
     movie_name = request.matchdict['name']
     new_name = movie_name.replace(" " , '+')
