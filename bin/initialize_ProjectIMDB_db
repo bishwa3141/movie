@@ -1,0 +1,10 @@
+#!/home/bishwa/Desktop/ProjectIMDB/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'ProjectIMDB==0.0','console_scripts','initialize_ProjectIMDB_db'
+__requires__ = 'ProjectIMDB==0.0'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('ProjectIMDB==0.0', 'console_scripts', 'initialize_ProjectIMDB_db')()
+    )
